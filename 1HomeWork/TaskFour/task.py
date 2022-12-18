@@ -1,18 +1,12 @@
-# // Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
-# Console.WriteLine("Введите X1");
-# int x1 = int.Parse(Console.ReadLine()!);
-# Console.WriteLine("Введите Y1");
-# int y1 = int.Parse(Console.ReadLine()!);
-# Console.WriteLine("Введите Z1");
-# int z1 = int.Parse(Console.ReadLine()!);
-# Console.WriteLine("Введите X2");
-# int x2 = int.Parse(Console.ReadLine()!);
-# Console.WriteLine("Введите Y2");
-# int y2 = int.Parse(Console.ReadLine()!);
-# Console.WriteLine("Введите Z2");
-# int z2 = int.Parse(Console.ReadLine()!);
+# Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 2D пространстве.
+# Пример:
 
-# int Lenght = 0;
-
-
-# Console.WriteLine($"Lenght = {Math.Sqrt(Lenght = ((x2 - x1)*(x2 - x1)) + ((y2 - y1)*(y2 - y1)) + ((z2 - z1)*(z2 - z1)))}");
+# - A (3,6); B (2,1) -> 5,09
+# - A (7,-5); B (1,-1) -> 7,21
+X1 = float(input('Введите Х1 '))
+Y1 = float(input('Введите Y1 '))
+X2 = float(input('Введите Х2 '))
+Y2 = float(input('Введите Y2 '))
+import math
+result = math.sqrt(((X2 - X1)*(X2 - X1)) + ((Y2 - Y1)*(Y2 - Y1)))
+print(round(result, 3))
