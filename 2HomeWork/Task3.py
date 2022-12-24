@@ -5,12 +5,11 @@ my_list =[]
 for i in range(10):
     my_list.append(random.randint(0,100))
 print(my_list)
-count = 0
+count = 9
 my_listResult = []
-for count in range(40):
-    numberRandom = random.randint(0,9)
-    if my_list [numberRandom] != -1:
-        my_listResult.append(my_list [numberRandom])
-        count = count + 1
-    my_list [numberRandom] = -1
+for i in range(10):
+    numberRandom = random.randint(0,count)
+    my_listResult.append(my_list [numberRandom])
+    count = count - 1
+    my_list.pop(numberRandom)
 print(my_listResult)
