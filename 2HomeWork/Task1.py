@@ -15,17 +15,3 @@ while (1 <= number):
     result = result + number % 10
     number = number / 10
 print(int(result))
-
-
-
-
-
-
-# numberday = int(input('Введите номер дня недели: '))
-
-# if numberday == 6 or numberday == 7:
-#     print('Выходной')
-# if numberday > 0 and numberday < 6:
-#     print('Рабочий день')
-# else:
-#     print('не является днем недели')
