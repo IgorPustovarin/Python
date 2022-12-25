@@ -5,7 +5,7 @@ my_list =[]
 for i in range(10):
     my_list.append(random.randint(0,100))
 print(my_list)
-count = 9
+count = 10
 my_listResult = []
 for i in range(10):
     numberRandom = random.randint(0,count)
