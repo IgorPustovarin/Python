@@ -1,0 +1,62 @@
+# Создайте программу для игры с конфетами человек против человека.
+# Условие задачи: На столе лежит заданное количество конфет. Играют два игрока делая ход друг после друга. 
+# Первый ход определяется жеребьёвкой. За один ход можно забрать не более чем 28 конфет. Все конфеты оппонента достаются сделавшему последний ход.
+# a) Добавьте игру против бота
+# b) Подумайте как наделить бота 'интеллектом'
+import random
+# from random import randint
+name = input('Введи свое имя уважаемый игрок ')
+print('У нас будет 2021 конфета. Первый ход определяется жеребьёвкой.')
+print('Сейчас определим кто ходит первый......')
+numberGamer = random.randint(1,2)
+candies = 100
+if numberGamer == 1:
+    print('Первым ходит ' + name)
+elif numberGamer == 2:
+    print('Первым ходит компьютер')
+candiesComp = 0
+candiesUser = 0
+if numberGamer == 2:
+    while (candies > 0): 
+        candiesComp = random.randint(1,28)
+        if candies <= 28:
+            print(f"Компьютер забирает {candies} конфет")
+            candies = candies - candies
+            print("Компьютер выиграл")
+            break
+        if candies > 28:
+            print(f"Компьютер забирает {candiesComp} конфет")
+        candies = candies - candiesComp
+        print(f"Осталось {candies} конфет")
+        if candies < 28:
+            print(name + " выиграл")
+        candiesUser = int(input('Сколько конфет заберешь ты дорогой ' + name + " "))
+        if candiesUser > 28:
+            print("Не мухлюй, запускай игру заново, но играй честно")
+            break
+        candies = candies - candiesUser
+        if candies == 0:
+            print(name + " поздравляю тебя, ты выиграл") 
+            break
+        print(f"Осталось {candies} конфет")
+if numberGamer == 1:
+     while (candies > 0): 
+        candiesUser = int(input('Сколько конфет заберешь ты дорогой ' + name + " "))
+        if candiesUser > 28:
+            print("Не мухлюй, запускай игру заново, но играй честно")
+            break
+        candies = candies - candiesUser
+        if candies == 0:
+            print(name + " поздравляю тебя, ты выиграл") 
+            break
+        print(f"Осталось {candies} конфет")
+        candiesComp = random.randint(1,28)
+        if candies <= 28:
+            print(f"Компьютер забирает {candies} конфет")
+            candies = candies - candies
+            print("Компьютер выиграл")
+            break
+        if candies > 28:
+            print(f"Компьютер забирает {candiesComp} конфет")
+        candies = candies - candiesComp
+        print(f"Осталось {candies} конфет")
